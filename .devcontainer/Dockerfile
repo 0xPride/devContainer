@@ -8,6 +8,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/base:0-${VARIANT}
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends zsh gcc make gdb valgrind libreadline-dev build-essential strace ltrace python3 python3-pip
 
+USER vscode
 RUN pip3 install norminette c-formatter-42
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN chsh -s /bin/zsh
