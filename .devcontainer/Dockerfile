@@ -9,13 +9,11 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends zsh gcc make gdb valgrind libreadline-dev build-essential strace ltrace python3 python3-pip
 
 ENV USER vscode
-# RUN useradd -mU $USER
-# RUN usermod -aG wheel $USER
+RUN chsh -s /bin/zsh vscode
 RUN echo "$USER:toor" | chpasswd
 RUN echo "root:toor" | chpasswd
 USER vscode
 RUN pip3 install norminette c-formatter-42
-RUN chsh -s /bin/zsh <<< toor
 RUN rm -rf /home/vscode/.oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 RUN curl https://get.volta.sh | bash
