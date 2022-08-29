@@ -11,12 +11,12 @@ echo "\t" git clone https://github.com/ayoubedd/devContainer
 git clone https://github.com/ayoubedd/devContainer 1>/dev/null 2>/dev/null
 
 sleep 1
-echo "installing the config."
-echo "\t" mv devContainer/.devcontainer .
+echo "Installing the config"
+echo "\t" mv devContainer/.devcontainer
 mv devContainer/.devcontainer .
 
 sleep 1
-echo "Cleanning up."
+echo "Cleanning up"
 echo "\t" rm -rf devContainer
 rm -rf devContainer
 
