@@ -12,5 +12,6 @@ USER vscode
 RUN pip3 install norminette c-formatter-42
 RUN rm -rf /home/vscode/.oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+RUN chsh -s /bin/zsh
 RUN curl https://get.volta.sh | bash
 RUN /home/vscode/.volta/bin/volta install node
