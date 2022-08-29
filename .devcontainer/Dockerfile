@@ -9,8 +9,8 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends zsh gcc make gdb valgrind libreadline-dev build-essential strace ltrace python3 python3-pip
 
 ENV USER vscode
-RUN useradd -mU $USER
-RUN usermod -aG wheel $USER
+# RUN useradd -mU $USER
+# RUN usermod -aG wheel $USER
 RUN echo "$USER:toor" | chpasswd
 RUN echo "root:toor" | chpasswd
 USER vscode
