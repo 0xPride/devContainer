@@ -19,8 +19,7 @@
 	"remoteUser": "vscode",
 	"features": {
 		"git": "latest",
-		"github-cli": "latest",
-		"node": "lts"
+		"github-cli": "latest"
 	},
 	"extensions": [
 		"vscodevim.vim",
