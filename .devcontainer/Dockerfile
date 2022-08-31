@@ -18,3 +18,6 @@ RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master
 RUN curl https://get.volta.sh | bash
 RUN /home/vscode/.volta/bin/volta install node
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN curl -fsSL https://deno.land/install.sh | sh
+RUN echo 'export DENO_INSTALL=\"$deno_install"' >> ~/.zshrc
+RUN echo 'export PATH=\"\$DENO_INSTALL/bin:\$PATH\""' >> ~/.zshrc
