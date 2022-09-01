@@ -20,17 +20,5 @@
 	"features": {
 		"github-cli": "latest",
 		"docker-in-docker": "latest"
-	},
-	"extensions": [
-		"vscodevim.vim",
-		"kube.42header",
-		"ms-vscode.cpptools"
-	],
-	"settings": {
-		"window.zoomLevel": 2,
-		"editor.lineNumbers": "relative",
-		"files.autoSave": "onFocusChange",
-		"42header.email": "aeddaoud@student.1337.ma",
-		"42header.username": "aeddaoud"
 	}
 }
